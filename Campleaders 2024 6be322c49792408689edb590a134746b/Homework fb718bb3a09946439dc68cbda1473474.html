@@ -1,0 +1,688 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Homework</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="fb718bb3-a099-4643-9dc6-8cbda1473474" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📚</span></div><h1 class="page-title">Homework</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-person"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesPerson"><path d="M10.9536 7.90088C12.217 7.90088 13.2559 6.79468 13.2559 5.38525C13.2559 4.01514 12.2114 2.92017 10.9536 2.92017C9.70142 2.92017 8.65137 4.02637 8.65698 5.39087C8.6626 6.79468 9.69019 7.90088 10.9536 7.90088ZM4.4231 8.03003C5.52368 8.03003 6.42212 7.05859 6.42212 5.83447C6.42212 4.63843 5.51245 3.68945 4.4231 3.68945C3.33374 3.68945 2.41846 4.64966 2.41846 5.84009C2.42407 7.05859 3.32251 8.03003 4.4231 8.03003ZM1.37964 13.168H5.49561C4.87231 12.292 5.43384 10.6074 6.78711 9.51807C6.18628 9.14746 5.37769 8.87231 4.4231 8.87231C1.95239 8.87231 0.262207 10.6917 0.262207 12.1628C0.262207 12.7974 0.548584 13.168 1.37964 13.168ZM7.50024 13.168H14.407C15.4009 13.168 15.7322 12.8423 15.7322 12.2864C15.7322 10.8489 13.8679 8.88354 10.9536 8.88354C8.04492 8.88354 6.17505 10.8489 6.17505 12.2864C6.17505 12.8423 6.50635 13.168 7.50024 13.168Z"></path></svg></span>Owner</th><td><span class="user"><img src="https://lh3.googleusercontent.com/a/AATXAJxH61P0YbdZS3hmX8QQnaiC6xwc-0RbITNge7dg=s100" class="icon user-icon"/>Михаил Дмитриевич Корощенко</span><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocJ_cMMgFMmKv6C4G6oZU9siIzozpzH4Tme7hN2NcdlDTA=s100" class="icon user-icon"/>Екатерина Корощенко</span></td></tr><tr class="property-row property-row-verification"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesVerification"><path d="M3.86426 14.0459H5.32715C5.45475 14.0459 5.56185 14.0892 5.64844 14.1758L6.6875 15.2148C7.13411 15.6615 7.56934 15.8825 7.99316 15.8779C8.42155 15.8779 8.85677 15.6569 9.29883 15.2148L10.3379 14.1758C10.429 14.0892 10.5384 14.0459 10.666 14.0459H12.1221C12.751 14.0459 13.2158 13.8955 13.5166 13.5947C13.8219 13.2939 13.9746 12.8268 13.9746 12.1934V10.7305C13.9746 10.6029 14.0202 10.4958 14.1113 10.4092L15.1436 9.37012C15.5902 8.92806 15.8112 8.49284 15.8066 8.06445C15.8066 7.63607 15.5856 7.19857 15.1436 6.75195L14.1113 5.71289C14.0202 5.6263 13.9746 5.52148 13.9746 5.39844V3.92871C13.9746 3.30436 13.8242 2.83952 13.5234 2.53418C13.2227 2.22884 12.7555 2.07617 12.1221 2.07617H10.666C10.5384 2.07617 10.429 2.03288 10.3379 1.94629L9.29883 0.914062C8.85677 0.462891 8.42155 0.239583 7.99316 0.244141C7.56934 0.244141 7.13411 0.467448 6.6875 0.914062L5.64844 1.94629C5.56185 2.03288 5.45475 2.07617 5.32715 2.07617H3.86426C3.23535 2.07617 2.76823 2.22656 2.46289 2.52734C2.16211 2.82812 2.01172 3.29525 2.01172 3.92871V5.39844C2.01172 5.52148 1.96842 5.6263 1.88184 5.71289L0.849609 6.75195C0.402995 7.19857 0.179688 7.63607 0.179688 8.06445C0.179688 8.49284 0.402995 8.92806 0.849609 9.37012L1.88184 10.4092C1.96842 10.4958 2.01172 10.6029 2.01172 10.7305V12.1934C2.01172 12.8223 2.16211 13.2871 2.46289 13.5879C2.76823 13.8932 3.23535 14.0459 3.86426 14.0459ZM7.23438 11.4277C7.10221 11.4277 6.98372 11.4004 6.87891 11.3457C6.77409 11.291 6.67155 11.2021 6.57129 11.0791L4.89648 9.04199C4.83724 8.96452 4.79167 8.88477 4.75977 8.80273C4.72786 8.7207 4.71191 8.63639 4.71191 8.5498C4.71191 8.37663 4.77116 8.22852 4.88965 8.10547C5.0127 7.97786 5.16081 7.91406 5.33398 7.91406C5.44336 7.91406 5.54134 7.93685 5.62793 7.98242C5.71452 8.02799 5.80339 8.10775 5.89453 8.22168L7.20703 9.88965L10.0371 5.36426C10.1829 5.12728 10.3675 5.00879 10.5908 5.00879C10.7594 5.00879 10.9098 5.06348 11.042 5.17285C11.1787 5.28223 11.2471 5.42578 11.2471 5.60352C11.2471 5.68099 11.2288 5.76302 11.1924 5.84961C11.1559 5.93164 11.1149 6.00911 11.0693 6.08203L7.87012 11.0723C7.78809 11.1908 7.69238 11.2796 7.58301 11.3389C7.47819 11.3981 7.36198 11.4277 7.23438 11.4277Z"></path></svg></span>Verification</th><td>Expired</td></tr></tbody></table></header><div class="page-body"><h1 id="ef726bf2-fffc-4c84-9217-dde40f64b2ad" class=""><a href="https://docs.google.com/spreadsheets/d/1hKBRv18Ow37mXIgXExNWTrtA3R28JNFm-kbX2KfwsBM/edit?usp=sharing">Рейтинговая таблица</a></h1><p id="ac1ef3e3-2243-49ea-b6fb-b0a8e0f2a158" class="">Следи за своими баллами здесь <a href="https://docs.google.com/spreadsheets/d/1hKBRv18Ow37mXIgXExNWTrtA3R28JNFm-kbX2KfwsBM/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1hKBRv18Ow37mXIgXExNWTrtA3R28JNFm-kbX2KfwsBM/edit?usp=sharing</a></p><h1 id="85b5f18d-250e-439b-99a2-d552049d2df5" class="">Week  7️⃣</h1><h3 id="fe43107f-5e31-44ec-af47-1462328b3f9c" class="">1. Изучить темы 🎞️</h3><p id="b23325c0-e87a-47f4-aa11-2951cce56455" class="">Смотрим видео, читаем статьи, впитываем информацию</p><figure id="8e3758da-0a68-411c-9fab-1ec10049f800" class="link-to-page"><a href="%D0%92%D0%BE%D0%B2%D0%BB%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%208e3758da0a68411c9fab1ec10049f800.html"><img class="icon" src="https://www.notion.so/icons/candy_pink.svg"/>Вовлечение</a></figure><figure id="373a32e3-75d6-49c7-aa54-207428efc36e" class="link-to-page"><a href="%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0%20%D0%BC%D0%BE%D1%82%D0%B8%D0%B2%D0%B0%D1%86%D0%B8%D0%B8%20373a32e375d649c7aa54207428efc36e.html"><img class="icon" src="https://www.notion.so/icons/star-outline_pink.svg"/>Система мотивации</a></figure><figure id="6307df9e-8478-4ee7-b5a1-f89fbd4e8f9d" class="link-to-page"><a href="%D0%9D%D0%B0%D0%B3%D1%80%D0%B0%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%206307df9e84784ee7b5a1f89fbd4e8f9d.html"><img class="icon" src="https://www.notion.so/icons/trophy_pink.svg"/>Награждение </a></figure><h3 id="77d2e1ec-944a-42bd-a659-1c0d8f51f366" class="">2. Получить допуск к аттестации 🎟️</h3><p id="0b4ee06a-3803-4c00-b297-43f6e0fae088" class="">Сдаем ВСЕ зачеты, которые еще не сдали</p><h3 id="5ecd262a-0fe4-47fa-8552-5984a018808b" class="">3. Танцевать танцы 🌟 </h3><p id="5ab3d271-fd6d-42d9-b52a-caa8e6e4cd08" class=""><strong>Cry<br/><br/></strong><a href="https://disk.yandex.ru/i/kMgXLJLXS6cVYw">https://disk.yandex.ru/i/RBtG-97voIuF2w</a></p><p id="eb9e880d-5d2e-4017-ab57-c4e51be0b59d" class=""><strong>I love it<br/><br/></strong><a href="https://disk.yandex.ru/i/NAGEo4U8iCk9Lw">https://disk.yandex.ru/i/7EMfh_ycfdjp0A</a></p><p id="9a035d93-8f13-4021-bbe7-da2d66849e10" class=""><strong>Ghetto<br/><br/></strong><a href="https://disk.yandex.ru/i/T_-kVQeet-rbCA">https://disk.yandex.ru/i/F59AnFXdWN1TVw</a></p><p id="8e321309-1721-43db-b4ad-47d9124638c3" class=""><strong>Gasolina</strong><br/><br/><a href="https://disk.yandex.ru/i/3qn-YLb-HuvP9w">https://disk.yandex.ru/i/e2kRSBthYApnBA</a></p><h1 id="f502eb47-fe40-4aa9-92d7-6e1425e02664" class="">Week  7️⃣</h1><h3 id="c4135224-7f03-4d1d-9e13-94264f8f32a1" class="">Deadline 12.05 23:59</h3><h3 id="c23f5fac-dd34-46c0-8ace-8ec4ec599c73" class="">1. Изучить темы 🎞️</h3><p id="9ce09fb8-049f-4f26-b1a1-734da96b13a0" class="">Смотрим видео, читаем статьи, впитываем информацию </p><figure id="f783e145-9761-4827-84ec-62d5eea37e74" class="link-to-page"><a href="%D0%A0%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D0%B8%20%D0%9E%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B8%CC%86%20%D0%B4%D0%B5%D0%BD%D1%8C%20f783e1459761482784ec62d5eea37e74.html"><span class="icon">👋🏻</span>Родители. Общение в первый день</a></figure><figure id="3f5cb89c-70ad-470c-a5fa-d978920f9f92" class="link-to-page"><a href="%D0%A0%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D0%B8%20%D0%92%D0%BE%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D1%81%D0%BC%D0%B5%D0%BD%D1%8B%203f5cb89c70ad470ca5fad978920f9f92.html"><span class="icon">🙌🏻</span>Родители. Во время смены</a></figure><figure id="d5dcf15d-f153-4948-bdb9-38b87a11f78b" class="link-to-page"><a href="%D0%A0%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D0%B8%20%D0%9F%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BD%D0%B8%D0%B8%CC%86%20%D0%B4%D0%B5%D0%BD%D1%8C%20%D0%B8%20%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%20%D1%81%D0%BC%D0%B5%D0%BD%D1%8B%20d5dcf15df1534948bdb938b87a11f78b.html"><span class="icon">🤝🏻</span>Родители. Последний день и после смены </a></figure><figure id="c8067b9d-1f09-4b06-b080-89582e891002" class="link-to-page"><a href="%D0%9A%D1%80%D1%83%D0%B3%20%D0%BF%D0%BE%D1%87%D0%B5%D1%82%D0%B0%20c8067b9d1f094b06b08089582e891002.html"><img class="icon" src="https://www.notion.so/icons/heart_pink.svg"/>Круг почета </a></figure><figure id="bbe0ecfb-9d6e-4123-b0f0-705d2aa419bb" class="link-to-page"><a href="Support%20bbe0ecfb9d6e4123b0f0705d2aa419bb.html"><img class="icon" src="https://www.notion.so/icons/battery-charging_pink.svg"/>Support</a></figure><figure id="8b939952-351b-43b1-bf50-b95d1410c0ad" class="link-to-page"><a href="%D0%9F%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D0%BA%D0%B0%208b939952351b43b1bf50b95d1410c0ad.html"><img class="icon" src="https://www.notion.so/icons/conversation_pink.svg"/>Проходка </a></figure><h3 id="48730991-93f6-42ec-b6b3-3cb86c752b22" class="">2. Закрыть долги 💸</h3><p id="d4e29ea6-693f-463d-b7c3-663f63494cff" class="">Сдаём то, что не успели сдать на прошлых неделях. У кого все сдано - получает дополнительный балл.</p><h3 id="58a5b548-74d1-46d3-94e7-7c806aaf621d" class="">3. Танцевать танцы 🌟</h3><p id="628a28a2-ab1f-4081-ae6c-55de055fa9bf" class=""><strong>El Camino<br/><br/></strong><a href="https://disk.yandex.ru/i/abqJszzNaLrA4Q">https://disk.yandex.ru/i/RBtG-97voIuF2w</a></p><p id="48e69068-5392-47b2-aa59-7aeb7ac6760a" class=""><strong>Begging<br/><br/></strong><a href="https://disk.yandex.ru/i/3-qV_EPjiYTvjw">https://disk.yandex.ru/i/7EMfh_ycfdjp0A</a></p><p id="556fe783-4f66-4fac-897f-00cddf8a3bbc" class=""><strong>Action<br/><br/></strong><a href="https://disk.yandex.ru/i/hF9sbwsJqxDXOA">https://disk.yandex.ru/i/F59AnFXdWN1TVw</a></p><p id="eec06ef8-655d-471c-b246-d431c1f88faf" class=""><strong>They don’t care about us</strong><br/><br/><a href="https://disk.yandex.ru/i/YaqfasbgNPzYqg">https://disk.yandex.ru/i/e2kRSBthYApnBA</a></p><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">Week  6️⃣</summary><div class="indented"><h3 id="babc808e-958c-488f-afcd-99dadc0fa069" class="">Deadline 5.05 23:59</h3><h3 id="51c65a58-3813-48e3-9dfa-1ad3a8f78cfa" class="">1. Изучить темы 🎞️</h3><p id="fc5638d6-9cec-4596-a397-a5bb74aac35d" class="">Смотрим видео, читаем статьи, впитываем информацию </p><figure id="139aa4eb-8b26-4aa6-8c2e-f98b08d1400a" class="link-to-page"><a href="%D0%9E%D1%81%D0%BE%D0%B1%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8%20%D0%B4%D0%B5%D1%82%D0%B5%D0%B8%CC%86%20%D1%80%D0%B0%D0%B7%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%B2%D0%BE%D0%B7%D1%80%D0%B0%D1%81%D1%82%D0%B0%20139aa4eb8b264aa68c2ef98b08d1400a.html"><img class="icon" src="https://www.notion.so/icons/baby_pink.svg"/>Особенности детей разного возраста</a></figure><figure id="d3adc5e7-b646-42b4-aeee-1a91364c80d1" class="link-to-page"><a href="%D0%91%D1%8B%D1%82%20%D0%BA%D0%B5%D0%BC%D0%BF%D0%BB%D0%B8%D0%B4%D0%B5%D1%80%D0%B0%20d3adc5e7b64642b4aeee1a91364c80d1.html"><img class="icon" src="https://www.notion.so/icons/home_pink.svg"/>Быт кемплидера</a></figure><figure id="45144d8c-3023-4bc1-8d83-3619acbfb685" class="link-to-page"><a href="%D0%A1%D0%BF%D0%B0%D1%81%D0%B8%D0%B1%D0%BA%D0%B8%2045144d8c30234bc18d833619acbfb685.html"><img class="icon" src="https://www.notion.so/icons/create_pink.svg"/>Спасибки</a></figure><figure id="ae2165bd-739c-4122-9169-20199d364568" class="link-to-page"><a href="Workshops%20ae2165bd739c4122916920199d364568.html"><img class="icon" src="https://www.notion.so/icons/butterfly_pink.svg"/>Workshops</a></figure><h3 id="73572909-908a-4d9a-aef3-90916c32e623" class="">2. Закрыть долги 💸</h3><p id="5e5786d6-ec83-48a9-8182-3a30995c71af" class="">Сдаём то, что не успели сдать на прошлых неделях. У кого все сдано - получает дополнительный балл.</p><h3 id="c0a0a549-b7ba-4a38-aa1b-953d0dc0f593" class="">3. Танцевать танцы 🌟</h3><p id="a237f76a-76fc-4409-873d-158c417280c9" class=""><strong>Alors on Danse<br/><br/></strong><a href="https://disk.yandex.ru/i/je9mznSMLyf3_w">https://disk.yandex.ru/i/RBtG-97voIuF2w</a></p><p id="c7be1360-83a8-4dfd-9bf9-c42fc0ca313b" class=""><strong>Handclap<br/><br/></strong><a href="https://disk.yandex.ru/i/rerdfOKsooHjAg">https://disk.yandex.ru/i/7EMfh_ycfdjp0A</a></p><p id="2fddb87c-a54e-4b16-991a-08381db3a017" class=""><strong>Tiponit<br/><br/></strong><a href="https://disk.yandex.ru/i/scUOqNOjxBs6qA">https://disk.yandex.ru/i/F59AnFXdWN1TVw</a></p><p id="070de378-df6c-4504-ab1d-d5eb69c19d8e" class=""><strong>FIFA</strong><br/><br/><a href="https://disk.yandex.ru/i/e2kRSBthYApnBA">https://disk.yandex.ru/i/e2kRSBthYApnBA</a></p><p id="5eca6477-3c64-409b-8607-6c5f72e105e1" class=""><strong>Family</strong><br/><br/><a href="https://disk.yandex.ru/i/JRcwdqF3wkvpCQ">https://disk.yandex.ru/i/JRcwdqF3wkvpCQ</a></p></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">Week 5️⃣</summary><div class="indented"><p id="5ef2be6d-8663-41a2-8a72-67c5041cb2fd" class="">
+</p><p id="8c5b5dec-584b-4e0f-bb1d-f5a8f1804090" class=""><strong>Deadline 28.04 23:59</strong></p><h3 id="461706b6-0234-44f6-a59b-f217e2a9066b" class="">1. Изучить темы 🎞️</h3><p id="7104c0e4-cd1a-448e-b6f6-d55db4f72b88" class="">Смотрим видео, читаем статьи, впитываем информацию </p><figure id="2b39da86-a165-410b-a7b9-331380afd250" class="link-to-page"><a href="%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20%D0%BB%D0%B5%D0%BA%D1%81%D0%B8%D0%BA%D0%BE%D0%B8%CC%86%202b39da86a165410ba7b9331380afd250.html">Работа с лексикой</a></figure><figure id="1389f72c-c24a-4073-8794-5f6911dfab10" class="link-to-page"><a href="%D0%9F%D0%B0%D1%82%D1%82%D0%B5%D1%80%D0%BD%D1%8B%201389f72cc24a407387945f6911dfab10.html"><img class="icon" src="https://www.notion.so/icons/playlist_pink.svg"/>Паттерны</a></figure><figure id="9b838e99-d7ed-47a0-bc46-bfd21529bb40" class="link-to-page"><a href="Talent%20Show%209b838e99d7ed47a0bc46bfd21529bb40.html"><img class="icon" src="https://www.notion.so/icons/star_pink.svg"/>Talent Show </a></figure><figure id="b0c3715e-40d5-4876-ae19-61ee529a3da0" class="link-to-page"><a href="%D0%9F%D0%BB%D1%8F%D0%B6%20b0c3715e40d54876ae1961ee529a3da0.html"><img class="icon" src="https://www.notion.so/icons/aquarius_pink.svg"/>Пляж</a></figure><figure id="49bcefa5-06a7-4b02-a0a6-8bb71c237b78" class="link-to-page"><a href="%D0%91%D1%8B%D1%82%20%D0%97%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D0%B5%2049bcefa506a74b02a0a68bb71c237b78.html"><img class="icon" src="https://www.notion.so/icons/home_pink.svg"/>Быт. Здоровье</a></figure><figure id="7cb2e6c7-e334-43f7-92d0-76420a6bea4b" class="link-to-page"><a href="%D0%92%D0%B5%D1%80%D1%82%D1%83%D1%88%D0%BA%D0%B8%207cb2e6c7e33443f792d076420a6bea4b.html"><img class="icon" src="https://www.notion.so/icons/flag_pink.svg"/>Вертушки</a></figure><figure id="ddef8ccf-2ab2-4e78-b42a-139ef350417b" class="link-to-page"><a href="Conflict%20ddef8ccf2ab24e78b42a139ef350417b.html"><img class="icon" src="https://www.notion.so/icons/meeting_pink.svg"/>Conflict </a></figure><h3 id="385fbd04-5eab-4118-b401-deb9b4ab3b40" class="">2. Закрыть долги 💸</h3><p id="d9463a0c-4d2f-47ae-ab73-576c4dcfb847" class="">Сдаём то, что не успели сдать на прошлых неделях. У кого все сдано - получает дополнительный балл.</p><h3 id="96909d6b-6c11-4dce-a173-07db1888e11b" class="">3. Танцевать танцы 🌟</h3><p id="eae76186-df55-493a-9006-268a8411f78e" class=""><strong>Low<br/><br/></strong><a href="https://disk.yandex.ru/i/-Nl0Tr6CYqPzhw">https://disk.yandex.ru/i/RBtG-97voIuF2w</a></p><p id="f7dea3a0-56f9-433e-9862-4ed6077debbf" class=""><strong>Sushi<br/><br/></strong><a href="https://disk.yandex.ru/i/71nmNF75c8ifcQ">https://disk.yandex.ru/i/7EMfh_ycfdjp0A</a></p><p id="4775adb9-aef9-406e-873d-d77012e53676" class=""><strong>Turn up the Love<br/><br/></strong><a href="https://disk.yandex.ru/i/mLYKHe1KOUR0JA">https://disk.yandex.ru/i/F59AnFXdWN1TVw</a></p><p id="edd3b125-e692-4ab2-82d7-39bfba06817d" class=""><strong>Tukata</strong><br/><br/><a href="https://disk.yandex.ru/i/tm6zetR8VSiRjg">https://disk.yandex.ru/i/MEiDaEIbx7N0cw</a></p><p id="233fced6-4e34-490c-96c3-5e585b8da7aa" class=""><strong>Where have you been<br/><br/></strong><a href="https://disk.yandex.ru/i/tzz7FjuJKazX6Q">https://disk.yandex.ru/i/tm6zetR8VSiRjg</a></p></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">Week 4️⃣</summary><div class="indented"><h2 id="9756403c-db54-4db9-9a26-64675035a9da" class="">Deadline 21.04 23:59</h2><h3 id="32d2e6c2-0414-4940-8611-c7c8c294eff4" class="">1. Изучить темы 🎞️</h3><p id="3eef55ac-da84-4267-8da3-b19ef59f0ca8" class="">Смотрим видео, читаем статьи, впитываем информацию </p><figure id="65d2f328-9f59-4168-b46e-c64892fc4001" class="link-to-page"><a href="Business%20Day%2065d2f3289f594168b46ec64892fc4001.html"><img class="icon" src="https://www.notion.so/icons/cash_pink.svg"/>Business Day </a></figure><figure id="220cce16-3954-47f6-be8e-7ecad81de179" class="link-to-page"><a href="Relax%20220cce16395447f6be8e7ecad81de179.html"><img class="icon" src="https://www.notion.so/icons/bed_pink.svg"/>Relax </a></figure><figure id="7e7094ef-e4e0-41fb-8319-ee5043bda06b" class="link-to-page"><a href="%D0%9F%D0%BE%D1%85%D0%B2%D0%B0%D0%BB%D0%B0%207e7094efe4e041fb8319ee5043bda06b.html"><img class="icon" src="https://www.notion.so/icons/thumbs-up_pink.svg"/>Похвала</a></figure><figure id="d6cb7018-2a67-42e2-aa10-f8b7d043436c" class="link-to-page"><a href="%D0%92%D1%8B%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%20d6cb70182a6742e2aa10f8b7d043436c.html"><img class="icon" src="https://www.notion.so/icons/emoji-angry_pink.svg"/>Выговор</a></figure><figure id="731c748f-dcc5-4c02-ad43-b46bb3909a3d" class="link-to-page"><a href="%D0%93%D1%80%D0%B0%D0%BC%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0%20731c748fdcc54c02ad43b46bb3909a3d.html"><img class="icon" src="https://www.notion.so/icons/forward_pink.svg"/>Грамматика</a></figure><figure id="e33f30cb-21ef-494a-b9d3-1f1e11fa8882" class="link-to-page"><a href="Evening%20Show%20e33f30cb21ef494ab9d31f1e11fa8882.html"><img class="icon" src="https://www.notion.so/icons/music-artist_pink.svg"/>Evening Show</a></figure><figure id="6a82a87a-7141-4256-b907-13bbe67ffe24" class="link-to-page"><a href="%D0%A0%D0%B5%D0%BF%D0%B5%D1%82%D0%B8%D1%86%D0%B8%D0%B8%206a82a87a71414256b90713bbe67ffe24.html"><img class="icon" src="https://www.notion.so/icons/music-artist_pink.svg"/>Репетиции</a></figure><figure id="3c96297d-a38f-4bbf-8788-be19a7eebd31" class="link-to-page"><a href="Brainstorming%203c96297da38f4bbf8788be19a7eebd31.html"><img class="icon" src="https://www.notion.so/icons/thought-dialogue_pink.svg"/>Brainstorming </a></figure><h3 id="57dd7e0f-b123-4623-99ad-e2dfe99a97c9" class="">2. Записать видео/кружок 🤳</h3><p id="eaa8f901-9fde-4912-9429-ee9426bf21f2" class="">Снимаем себя на видео, как заявляем мозговой штурм и отправляем своему куратору на проверку</p><h3 id="460924f7-15f1-41a3-afd4-176ecf35eb12" class="">3. Пройти тест по гигиене🫵🏼</h3><p id="c7ee753a-1921-489b-9e96-880d211f5490" class="">Внимательно смотрим видео и читаем информацию в статье: </p><figure id="f2cc5736-fc33-4013-80fb-9d0cc054fa33" class="link-to-page"><a href="%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B%20%D0%B2%20%D0%BB%D0%B0%D0%B3%D0%B5%D1%80%D1%8C%20f2cc5736fc33401380fb9d0cc054fa33.html"><img class="icon" src="https://www.notion.so/icons/official-document_pink.svg"/>Документы в лагерь</a></figure><p id="03845fd1-75e1-4039-95dd-a193cda8a00b" class="">Проходим тест  <a href="https://vk.com/away.php?to=https%3A%2F%2Fgigtest.ru%2F&amp;utf=1">https://gigtest.ru/</a> и скидываем скрин с успешным результатом Сандре в Telegram <a href="https://t.me/sokatie">https://t.me/sokatie</a> </p><h3 id="82ef49d8-346b-45ce-b894-77047bf40ed0" class="">4. Закрыть долги 💸</h3><p id="aad6a344-69bb-4522-8ba8-f8e74e4a45d1" class="">Сдаём то, что не успели сдать на прошлых неделях. У кого все сдано - получает дополнительный балл.</p><h3 id="042ae152-0127-42fb-822c-54226bc487ca" class="">5. Танцевать танцы 🌟</h3><p id="944c1ba0-df81-49ee-84ad-e7529f734488" class=""><strong>16 Shots<br/><br/></strong><a href="https://disk.yandex.ru/i/9o2TOgr4iT5zTQ">https://disk.yandex.ru/i/RBtG-97voIuF2w</a></p><p id="a47fb2f2-ebf3-4804-8ec0-41b3ce69d47c" class=""><strong>No money<br/><br/></strong><a href="https://disk.yandex.ru/i/oQEA1hX-Lna4BQ">https://disk.yandex.ru/i/7EMfh_ycfdjp0A</a></p><p id="0d06313d-c72d-46c3-89f7-99010a523c7b" class=""><strong>Hold Us<br/><br/></strong><a href="https://disk.yandex.ru/i/WBXd-uB_BRh4jw">https://disk.yandex.ru/i/F59AnFXdWN1TVw</a></p><p id="cea6729a-328a-4d6c-b7a1-b014f806a92a" class=""><strong>Uno</strong><br/><br/><a href="https://disk.yandex.ru/i/KeQtOhWaCJRCBQ">https://disk.yandex.ru/i/MEiDaEIbx7N0cw</a></p><p id="c146ca50-a0b2-4705-a779-a429aa1cdf53" class=""><strong>Shake it off<br/><br/></strong><a href="https://disk.yandex.ru/i/507WRxbPk7_j9Q">https://disk.yandex.ru/i/tm6zetR8VSiRjg</a></p><p id="a2f18383-ac41-4f0f-985c-6af16691bfcf" class="">
+</p></div></details><p id="fada78aa-7eab-4480-b6b0-9457060adeeb" class="">
+</p><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">Week 3️⃣</summary><div class="indented"><h2 id="58193905-a320-4d86-acca-379ad9cfa5eb" class="">Deadline 14.04 23:59</h2><h3 id="f07649fc-9fa1-4b18-90a4-71fe4049ce7d" class="">1. Изучить темы 🎞️</h3><p id="eb4fd6c4-79f9-4553-9f09-42cab481de2a" class="">Смотрим видео, читаем статьи, впитываем информацию </p><figure id="cbe32cec-71af-4993-9d09-884bd116344b" class="link-to-page"><a href="%D0%91%D1%8B%D1%82%20%D0%A3%D0%B1%D0%BE%D1%80%D0%BA%D0%B0%20cbe32cec71af49939d09884bd116344b.html"><img class="icon" src="https://www.notion.so/icons/coat_pink.svg"/>Быт. Уборка </a></figure><figure id="6c6e7116-38ea-46f2-b1f7-dc0ca6db1799" class="link-to-page"><a href="%D0%A3%D1%80%D0%BE%D0%BA%20%D0%B2%20%D0%BB%D0%B0%D0%B3%D0%B5%D1%80%D0%B5%206c6e711638ea46f2b1f7dc0ca6db1799.html"><img class="icon" src="https://www.notion.so/icons/language_pink.svg"/>Урок в лагере</a></figure><figure id="5b71abd0-9d34-459e-bbf9-fada81840a3d" class="link-to-page"><a href="%D0%AF-%D1%81%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D0%B5%205b71abd09d34459ebbf9fada81840a3d.html"><img class="icon" src="https://www.notion.so/icons/profile_pink.svg"/>Я-сообщение</a></figure><figure id="7623c64d-4294-4766-ba9d-df9390ea9888" class="link-to-page"><a href="%D0%90%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5%20%D1%81%D0%BB%D1%83%D1%88%D0%B0%D0%BD%D0%B8%D0%B5%207623c64d42944766ba9ddf9390ea9888.html"><img class="icon" src="https://www.notion.so/icons/ear_pink.svg"/>Активное слушание </a></figure><figure id="54d943f7-2d9e-4d76-bab4-e99698566c3f" class="link-to-page"><a href="%D0%90%D0%BD%D0%BA%D0%B5%D1%82%D0%B0%20%D1%80%D0%B5%D0%B1%D0%B5%D0%BD%D0%BA%D0%B0%20%D0%B2%20%D0%97%D0%9B%2054d943f72d9e4d76bab4e99698566c3f.html"><img class="icon" src="https://www.notion.so/icons/document_pink.svg"/>Анкета ребенка в ЗЛ</a></figure><figure id="609603db-2ac7-41ea-9f9d-c920417abad5" class="link-to-page"><a href="%D0%9E%D1%82%D1%8A%D0%B5%D0%B7%D0%B4%20%D0%B8%20%D0%B7%D0%B0%D0%B5%D0%B7%D0%B4%20609603db2ac741ea9f9dc920417abad5.html"><img class="icon" src="https://www.notion.so/icons/bus_pink.svg"/>Отъезд и заезд</a></figure><figure id="4ffdfa81-abde-4289-a594-fb9cdff59d19" class="link-to-page"><a href="%D0%92%D0%B5%D1%87%D0%B5%D1%80%D0%B8%D0%BD%D0%BA%D0%B8%20%D0%B2%20PE%204ffdfa81abde4289a594fb9cdff59d19.html"><img class="icon" src="https://www.notion.so/icons/confetti-ball_pink.svg"/>Вечеринки в PE</a></figure><figure id="330734a4-6924-4409-bbf5-d0dec86f2fb0" class="link-to-page"><a href="Dancebattle%20330734a469244409bbf5d0dec86f2fb0.html"><img class="icon" src="https://www.notion.so/icons/people_pink.svg"/> Dancebattle</a></figure><h3 id="c192e9dc-ef31-4ebc-9dcd-d877164ba782" class="">2. Записать кружок 🤳</h3><p id="5c2188f1-32de-4585-bd13-d1401b71f66b" class="">Записываем кружок, как делаем Я-сообщение и отправляем своему куратору </p><h3 id="384e6f3c-95e5-42c8-8b34-911e0cbc1bb6" class="">3. Закрыть долги 💸</h3><p id="333fa77f-23e7-4665-936d-728e9f032f00" class="">Сдаём то, что не успели сдать на прошлых неделях. У кого все сдано - получает дополнительный балл.</p><h3 id="daad922e-1959-4cec-be3f-761af7a82abc" class="">4. Танцевать танцы 🌟</h3><p id="92ad4293-0c44-41f1-b297-295cae65ce3a" class=""><strong>Moulaga<br/><br/></strong><a href="https://disk.yandex.ru/i/RBtG-97voIuF2w">https://disk.yandex.ru/i/RBtG-97voIuF2w</a></p><p id="4a6386fa-86bf-4f9e-ba92-c16e6ed858ea" class=""><strong>Bad Queens<br/><br/></strong><a href="https://disk.yandex.ru/i/7EMfh_ycfdjp0A">https://disk.yandex.ru/i/7EMfh_ycfdjp0A</a></p><p id="99eef56b-b243-4805-8bea-f935dc5a8c85" class=""><strong>Mad Love<br/><br/></strong><a href="https://disk.yandex.ru/i/F59AnFXdWN1TVw">https://disk.yandex.ru/i/F59AnFXdWN1TVw</a></p><p id="6b126429-2107-4439-be86-1824434bc9a8" class=""><strong>Pump it</strong><br/><br/><a href="https://disk.yandex.ru/i/MEiDaEIbx7N0cw">https://disk.yandex.ru/i/MEiDaEIbx7N0cw</a></p><p id="32c7039b-6bca-48b6-95e4-2e43e7099e11" class=""><strong>Tukata<br/><br/></strong><a href="https://disk.yandex.ru/i/tm6zetR8VSiRjg">https://disk.yandex.ru/i/tm6zetR8VSiRjg</a></p></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">Week 2️⃣</summary><div class="indented"><h2 id="19046022-9a12-4100-b675-c4d0e492436c" class="">Deadline 7.04 23:59</h2><h3 id="b5c0a932-12ea-4e60-b1d9-934d910048da" class="">1. Изучить темы 🎞️</h3><p id="2b951509-6110-4182-a5e0-fac763c96865" class="">Смотрим видео, читаем статьи, впитываем информацию</p><figure id="0fb9a047-014a-4d1c-9d2a-b47c008cbaeb" class="link-to-page"><a href="%D0%90%D0%BD%D0%B3%D0%BB%D0%B8%D0%B8%CC%86%D1%81%D0%BA%D0%B8%D0%B8%CC%86%20%D0%B2%20%D0%BB%D0%B0%D0%B3%D0%B5%D1%80%D0%B5%200fb9a047014a4d1c9d2ab47c008cbaeb.html"><img class="icon" src="https://www.notion.so/icons/translate_pink.svg"/>Английский в лагере</a></figure><figure id="2d93cf9b-b27c-4cfb-9b42-e80cd5ace6bf" class="link-to-page"><a href="%D0%A1%D0%BF%D0%BE%D1%80%D1%82%20%D0%B2%20%D0%BB%D0%B0%D0%B3%D0%B5%D1%80%D0%B5%202d93cf9bb27c4cfb9b42e80cd5ace6bf.html"><img class="icon" src="https://www.notion.so/icons/basketball_pink.svg"/>Спорт в лагере</a></figure><figure id="e1831b2e-8a31-4eef-82d2-649cd376875f" class="link-to-page"><a href="%D0%A1%D0%BF%D0%BB%D0%BE%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B%20e1831b2e8a314eef82d2649cd376875f.html"><img class="icon" src="https://www.notion.so/icons/groups_pink.svg"/>Сплочение команды</a></figure><figure id="bbc132f9-9b54-43eb-adde-331b3eca1fb5" class="link-to-page"><a href="%D0%9E%D0%B4%D0%BD%D0%BE%D0%BC%D0%B8%D0%BD%D1%83%D1%82%D0%BD%D0%B0%D1%8F%20%D1%86%D0%B5%D0%BB%D1%8C%20bbc132f99b5443ebadde331b3eca1fb5.html"><img class="icon" src="https://www.notion.so/icons/bullseye_pink.svg"/>Одноминутная цель</a></figure><figure id="d43e2880-fa50-4f04-aee4-4e3698696da3" class="link-to-page"><a href="FTC%20d43e2880fa504f04aee44e3698696da3.html"><img class="icon" src="https://www.notion.so/icons/conversation_pink.svg"/>FTC</a></figure><figure id="4a42c891-9d02-433a-9a34-7fa1e46c2bc5" class="link-to-page"><a href="%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0%20%D0%BD%D0%B0%20%D1%83%D1%80%D0%BE%D0%BA%D0%B0%D1%85%204a42c8919d02433a9a347fa1e46c2bc5.html"><img class="icon" src="https://www.notion.so/icons/gavel_pink.svg"/>Правила на уроках</a></figure><h3 id="125db9f6-ad16-4f37-8e16-74cd4da4b121" class="">2. Записать видео🤳</h3><p id="3b426fe8-0679-4fbe-9e28-70f1154aa27c" class="">Заявление правил Top Secret и отправить своему куратору </p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="05d98b7d-534d-4507-a445-d19600786e6e"><div style="font-size:1.5em"><span class="icon">❗</span></div><div style="width:100%">видео пример из материалов прошлой недели - </div></figure><h3 id="e4738d88-04a3-48ba-96ee-c4d2e88218f2" class="">3. Написать 8 игр на сплочение по алгоритму 🗂️</h3><p id="202fb2ae-927f-42dd-8b57-76e7a6559da0" class="">Переходим по ссылке, ищем папку со своим ником, добавляем в документ “Игры на сплочение” и добавляем 8 игр следуя примеру</p><figure id="eacb9e30-a4bf-4a4c-9d0e-7b87db287e82"><a href="https://drive.google.com/drive/folders/1LHdSmfzZQTBKDK_pXZEXm_vWQPzTh65U?usp=sharing" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Папки кемпов 24 - Google Drive</div></div><div class="bookmark-href"><img src="https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png" class="icon bookmark-icon"/>https://drive.google.com/drive/folders/1LHdSmfzZQTBKDK_pXZEXm_vWQPzTh65U?usp=sharing</div></div></a></figure><h3 id="6a1cbc12-5e47-449a-9fc0-84b8d1e545fc" class="">4. Танцевать танцы 🌟</h3><p id="6c828cbd-08d2-419c-9340-7fa9d943899c" class="">Переходим по ссылке и повторяем за девушками на видео 💃</p><p id="56546398-171d-4337-a5df-9effd7aa34ff" class=""><strong>Fergalicious</strong><br/><br/><a href="https://disk.yandex.ru/i/pPV4JkeLaxZcmg">https://disk.yandex.ru/i/w0AGxgBXIttKQQ</a></p><p id="4bc0f61a-48bb-4f85-a106-a58113bcd1e8" class=""><strong>Industry Baby</strong><br/><br/><a href="https://disk.yandex.ru/i/iNaT46ON-qPbtw">https://disk.yandex.ru/i/iNaT46ON-qPbtw</a></p><p id="ae78f212-6d32-4e79-8836-836b371b473a" class=""><strong>Taki Taki</strong><br/><br/><a href="https://disk.yandex.ru/i/BOg1IZ8KlojbGA">https://disk.yandex.ru/i/BOg1IZ8KlojbGA</a></p><p id="1e337965-fad5-4520-bb53-f1e1c001c149" class=""><strong>Bangarang</strong><br/><br/><a href="https://disk.yandex.ru/i/SWqJprWTjX24ug">https://disk.yandex.ru/i/SWqJprWTjX24ug</a><br/><br/></p><p id="ec6cd8e5-818c-4708-833e-59ec6d063180" class="">❗ Следующая очная встреча будет 21.04❗</p></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">Week 1️⃣ </summary><div class="indented"><h2 id="dccb579d-594b-4e27-ba74-fd069e9fd835" class="">Deadline 31.03 23:59</h2><h3 id="55276328-e0fd-468a-9704-081a058eb5d1" class="">1. Записаться на смены</h3><p id="248978d2-02aa-4dba-af56-94fee5a253a4" class="">Переходим по ссылке и отмечаемся под всеми сменами</p><figure id="d470b8a6-6cdd-465a-8829-3ef3f8329962"><a href="https://docs.google.com/forms/d/e/1FAIpQLSeZyX690hRz4ZvFe5BIy6awQjUE3a0mzKp_bzYI6MfxdvlU2w/viewform?usp=sf_link" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Записаться на смену 2024</div></div><div class="bookmark-href"><img src="https://ssl.gstatic.com/docs/forms/device_home/android_192.png" class="icon bookmark-icon"/>https://docs.google.com/forms/d/e/1FAIpQLSeZyX690hRz4ZvFe5BIy6awQjUE3a0mzKp_bzYI6MfxdvlU2w/viewform?usp=sf_link</div></div><img src="https://lh4.googleusercontent.com/kSuZqVyACvEBAsoADUZf_7OV5DBTuvhNY5qGBVU307TuFDyRhn62wg-E2O_Xa5Vlph6YRnPrLQA=w1200-h630-p" class="bookmark-image"/></a></figure><h3 id="5053773e-3cb7-4517-ab0b-5124d914912b" class="">2. Подписать договор</h3><p id="7f1f2c21-1dd6-4d01-a4c3-070c832b0fc6" class="">Переходим по ссылке, читаем договор, пишем ФИО и дату, нажимаем кнопку “Отправить”</p><figure id="42e312af-fb22-4772-b6de-4d696da57d4b"><a href="https://camp.planetenglish.ru/job" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Copy of Школа кэмплидера PE Camp</div><div class="bookmark-description">Стань кэмплидером в крупнейшем английском лагере на Урале!</div></div><div class="bookmark-href"><img src="https://static.tildacdn.com/tild3331-6162-4630-b862-393537333439/_.png" class="icon bookmark-icon"/>https://camp.planetenglish.ru/job</div></div><img src="https://thb.tildacdn.com/tild3964-6236-4934-b035-346536313631/-/resize/504x/1d7df713791f4a1cb53f.jpg" class="bookmark-image"/></a></figure><h3 id="13cdec40-730b-4309-86c3-872f34b4de17" class="">3. Изучить темы</h3><p id="6cfbf6ba-43a7-411c-9833-ce0d81f28cd4" class="">Смотрим видео, читаем статьи, впитываем информацию</p><figure id="329d6aa0-a760-4fa0-8981-39bfe2758784" class="link-to-page"><a href="%D0%A2%D0%B0%D0%BD%D1%86%D1%8B%20PE%20329d6aa0a7604fa0898139bfe2758784.html"><img class="icon" src="https://www.notion.so/icons/music-album_pink.svg"/>Танцы PE</a></figure><figure id="9395c6c4-cb0d-464b-bbb2-3f89a23224fd" class="link-to-page"><a href="Top%20Secret%209395c6c4cb0d464bbbb23f89a23224fd.html"><img class="icon" src="https://www.notion.so/icons/conceal_pink.svg"/>Top Secret</a></figure><figure id="dc37b4e1-eca5-4be7-a12c-2003b9e26e15" class="link-to-page"><a href="%D0%97%D0%B0%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B8%D0%B3%D1%80%D1%8B%20dc37b4e1eca54be7a12c2003b9e26e15.html"><img class="icon" src="https://www.notion.so/icons/bowling_pink.svg"/>Заявление игры</a></figure><figure id="84f6ccc6-74fd-4fb1-b444-2b3f9766c2f6" class="link-to-page"><a href="%D0%A6%D0%B5%D0%BB%D1%8C%20%D0%BD%D0%B0%20%D1%81%D0%BC%D0%B5%D0%BD%D1%83%20%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0%20%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B%2084f6ccc674fd4fb1b4442b3f9766c2f6.html"><img class="icon" src="https://www.notion.so/icons/bullseye_pink.svg"/>Цель на смену. Правила команды.</a></figure><figure id="b97babac-f7c1-45af-8359-9b1e912871ab" class="link-to-page"><a href="%D0%9F%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF%D1%8B%20%D0%BE%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D1%8F%20%D1%81%20%D1%80%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8F%D0%BC%D0%B8%20b97babacf7c145af83599b1e912871ab.html"><img class="icon" src="https://www.notion.so/icons/people_pink.svg"/>Принципы общения с родителями</a></figure><h3 id="0fa58b3d-d211-45c8-b1f3-242151f0cdbc" class="">4. Написать 9 игр на знакомство по алгоритму</h3><p id="55ecaa56-9e1f-4f58-adba-555cb0bfa6cf" class="">Переходим по ссылке, ищем папку со своим ником, добавляем в документ “Игры на знакомство” 9 игр, следуя примеру<br/>Перед выполнением этого задания изучите тему <br/><a href="%D0%97%D0%B0%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B8%D0%B3%D1%80%D1%8B%20dc37b4e1eca54be7a12c2003b9e26e15.html">“Заявление игры”</a></p><figure id="40df441a-72d9-43b8-9d8a-5d2750ea8616"><a href="https://drive.google.com/drive/folders/1LHdSmfzZQTBKDK_pXZEXm_vWQPzTh65U?usp=sharing" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Папки кемпов 24 - Google Drive</div></div><div class="bookmark-href"><img src="https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png" class="icon bookmark-icon"/>https://drive.google.com/drive/folders/1LHdSmfzZQTBKDK_pXZEXm_vWQPzTh65U?usp=sharing</div></div></a></figure></div></details><p id="87f51a57-557e-4eea-95d7-0d094dc45c15" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

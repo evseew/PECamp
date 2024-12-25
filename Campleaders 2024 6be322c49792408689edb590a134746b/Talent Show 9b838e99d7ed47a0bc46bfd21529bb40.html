@@ -1,0 +1,684 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Talent Show </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="9b838e99-d7ed-47a0-bc46-bfd21529bb40" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="https://www.notion.so/icons/star_pink.svg"/></div><h1 class="page-title">Talent Show </h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-person"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesPerson"><path d="M10.9536 7.90088C12.217 7.90088 13.2559 6.79468 13.2559 5.38525C13.2559 4.01514 12.2114 2.92017 10.9536 2.92017C9.70142 2.92017 8.65137 4.02637 8.65698 5.39087C8.6626 6.79468 9.69019 7.90088 10.9536 7.90088ZM4.4231 8.03003C5.52368 8.03003 6.42212 7.05859 6.42212 5.83447C6.42212 4.63843 5.51245 3.68945 4.4231 3.68945C3.33374 3.68945 2.41846 4.64966 2.41846 5.84009C2.42407 7.05859 3.32251 8.03003 4.4231 8.03003ZM1.37964 13.168H5.49561C4.87231 12.292 5.43384 10.6074 6.78711 9.51807C6.18628 9.14746 5.37769 8.87231 4.4231 8.87231C1.95239 8.87231 0.262207 10.6917 0.262207 12.1628C0.262207 12.7974 0.548584 13.168 1.37964 13.168ZM7.50024 13.168H14.407C15.4009 13.168 15.7322 12.8423 15.7322 12.2864C15.7322 10.8489 13.8679 8.88354 10.9536 8.88354C8.04492 8.88354 6.17505 10.8489 6.17505 12.2864C6.17505 12.8423 6.50635 13.168 7.50024 13.168Z"></path></svg></span>Owner</th><td><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocIhnqq0_g_IgEyHqGwzOXg9bLqXZKNwrASS7iDda5Ol=s100" class="icon user-icon"/>Татьяна Сергеевна Самохвалова</span></td></tr></tbody></table></header><div class="page-body"><p id="6188d518-4172-49ab-8b39-07769a073732" class=""><strong>💫TALENT SHOW💫<br/><br/></strong></p><figure id="39fc00c6-ba09-426b-a7ec-79885b5a5b80"><div class="source"><a href="https://www.loom.com/share/417cd017b7a940cdae9f521138c6f8e0?sid=5753766d-213f-4300-9063-050eaddde93d">https://www.loom.com/share/417cd017b7a940cdae9f521138c6f8e0?sid=5753766d-213f-4300-9063-050eaddde93d</a></div></figure><p id="3f487239-2990-4e30-b56b-b385f769d6fe" class="">День талантов - яркий, один из финальных дней, когда ребята становятся звездами и демонстрируют свои таланты (песни, танцы, стихи, трюки, фокусы) всему лагерю 🌟</p><p id="94a2e5fa-41a8-4ab9-a03e-76499919ef65" class=""><span style="border-bottom:0.05em solid"><em><strong>Цель:</strong></em></span></p><ul id="5d159dab-6092-47b7-82f7-7100417192ca" class="bulleted-list"><li style="list-style-type:disc">Возможность выступить на сцене,где в любом случае поддержат!</li></ul><ul id="cde456f2-0475-4cb6-8c69-59b36c2a32c0" class="bulleted-list"><li style="list-style-type:disc">Проявить себя и свой талант</li></ul><ul id="f3ccc431-5050-4924-b5d6-24fae272c769" class="bulleted-list"><li style="list-style-type:disc">Найти свой талант</li></ul><ul id="5f9e9e5c-dd25-4441-b9f0-86c9acdd04d3" class="bulleted-list"><li style="list-style-type:disc">Подружиться с ребятами с других команд</li></ul><ul id="ceb84304-4076-41c4-8212-8afb8a311cde" class="bulleted-list"><li style="list-style-type:disc">Стать ведущим мероприятия</li></ul><ul id="a8d11351-6cc0-42f8-a39a-74984f2c4b89" class="bulleted-list"><li style="list-style-type:disc">Отправить видео маме и похвалить ребенка</li></ul><p id="4263f8a8-a7fc-49e6-bb1e-f64235e9c29c" class=""><span style="border-bottom:0.05em solid"><em><strong>Подготовка</strong></em></span><span style="border-bottom:0.05em solid"> :</span></p><ol type="1" id="6108f06e-8739-447f-9b59-6d52d9e43e20" class="numbered-list" start="1"><li>Рассказать детям о дне талантов</li></ol><ol type="1" id="7a43b333-abfc-4ea3-af78-da2ae0f2745c" class="numbered-list" start="2"><li>Узнать о детских талантах</li></ol><ol type="1" id="84af55df-86b7-44b2-8d66-a6c528951e6a" class="numbered-list" start="3"><li>Вдохновить их на выступление со своим талантом</li></ol><ol type="1" id="782f2891-528d-49d8-b73b-1c7f7c068cb4" class="numbered-list" start="4"><li>Составить список выступающих детей (что делают, какая музыка)</li></ol><ol type="1" id="1f871300-50de-4db1-b2f3-9668a23e5188" class="numbered-list" start="5"><li>Вовлечь невыступающих детей в поддержку</li></ol><ol type="1" id="2237d1ab-a8c4-43a2-85f3-6e6b7d892455" class="numbered-list" start="6"><li>Рассказать о возможности стать ведущим и сделать список ведущих</li></ol><ol type="1" id="443737a0-b3a0-40fd-a4cb-0fe02c398a78" class="numbered-list" start="7"><li>Общаться с другими вожатыми и объединять номера (гимнастика, спортсмены, фокусники, танцоры, певцы и т.д.)</li></ol><ol type="1" id="bc390f61-f412-427e-8506-4b1e60366e26" class="numbered-list" start="8"><li>Если мало номеров - подготовить крутой и качественный номер от всей команды</li></ol><ol type="1" id="fa0382ea-0ff1-4e54-bf42-63022988bbf0" class="numbered-list" start="9"><li>Приветствуются номера от кемплидеров❤️</li></ol><ol type="1" id="06781671-53b0-4777-8133-6741dfd0372c" class="numbered-list" start="10"><li>Контролировать своих детей во время подготовки, помогать идеями в реализации<br/><br/></li></ol><figure id="85001a49-8ef3-4c0b-a603-d6c67bfd7360"><div class="source"><a href="https://www.loom.com/share/e74a9379da664260b041f21bcff679eb?sid=b00559eb-2baf-4239-8ad0-82cacc080a06">https://www.loom.com/share/e74a9379da664260b041f21bcff679eb?sid=b00559eb-2baf-4239-8ad0-82cacc080a06</a></div></figure><p id="0313baf7-c2fc-41c0-8440-60286da727fb" class=""><span style="border-bottom:0.05em solid"><em><strong>Требования к выступлению:</strong></em></span></p><ul id="6c21e10b-4c15-480a-9041-9a28470ba3d1" class="bulleted-list"><li style="list-style-type:disc">Дети одеты красиво и причёсаны (все дети)</li></ul><ul id="0701d1f8-980e-4e70-9f6d-600c4d287d8c" class="bulleted-list"><li style="list-style-type:disc">Выступление 1-1,5 минуты (куплет + припев) - нужно проконтролировать заранее</li></ul><ul id="82c3f989-24d9-437a-bdaf-17eda92475a6" class="bulleted-list"><li style="list-style-type:disc">2 - максимум 3 номера от команды (не больше!) - объединение детей из разных команд очень приветствуется)</li></ul><ul id="ee9573be-848f-43d5-9dec-505c7d6481d4" class="bulleted-list"><li style="list-style-type:disc">Максимум детских желаний в реализации</li></ul><ul id="ad5ddafa-ccb9-49da-965a-8524de0095b5" class="bulleted-list"><li style="list-style-type:disc">Английский! (стихи, танцы и песни под английские песни, если что-то надо сказать в микрофон - добавить в речь английский)</li></ul><p id="b021c423-7f15-4abd-a149-32914bf9b086" class=""><span style="border-bottom:0.05em solid"><em><strong>Варианты выступлений</strong></em></span></p><ul id="7119743c-c214-4c37-8b0c-2bf6666987a7" class="bulleted-list"><li style="list-style-type:disc">Танцы</li></ul><ul id="c10c521e-dc6c-41e9-9c12-cf8596b723b7" class="bulleted-list"><li style="list-style-type:disc">Песни</li></ul><ul id="ca810263-d424-4c90-98fa-e6dbbc735ebc" class="bulleted-list"><li style="list-style-type:disc">Гимнастика</li></ul><ul id="35e9761a-03fe-40ae-8dc2-8a79b75b8d88" class="bulleted-list"><li style="list-style-type:disc">Спортсмены (боксёры, футболисты, тхэквондисты)</li></ul><ul id="a90aeceb-121d-4afe-b1d8-f0a4782409f0" class="bulleted-list"><li style="list-style-type:disc">Фокусники</li></ul><ul id="a8b6c61f-ce84-4de2-9b8c-de852b79d8fa" class="bulleted-list"><li style="list-style-type:disc">Актёры и актрисы (сценки)</li></ul><ul id="b945d23d-67fa-48f0-a583-4637d18c3b11" class="bulleted-list"><li style="list-style-type:disc">Художники</li></ul><ul id="60dadfa2-057e-420c-9d3c-f209960e2a6d" class="bulleted-list"><li style="list-style-type:disc">Видео таланта (картины, подделки)</li></ul><ul id="5f459f6e-edd0-4f04-b27f-3c065b2a9627" class="bulleted-list"><li style="list-style-type:disc">Кубики Рубика</li></ul><ul id="28233ab0-868f-4516-99a9-a2332827a005" class="bulleted-list"><li style="list-style-type:disc">Фотографы</li></ul><ul id="11fc9ed7-5eae-4651-8d42-f8364159174b" class="bulleted-list"><li style="list-style-type:disc">Live концерт</li></ul><p id="4b218f90-9fc3-4c61-915b-6e29ca70cdb6" class=""><span style="border-bottom:0.05em solid"><em><strong>Репетиция</strong></em></span><span style="border-bottom:0.05em solid">:</span></p><p id="4d2164b7-45ad-4a58-819f-586be54b7491" class=""><em><strong>Цель:</strong></em></p><ul id="3ca1ca8f-c3fe-47fa-9915-dcdf55cfa102" class="bulleted-list"><li style="list-style-type:disc">Утвердить выступление с ведущим</li></ul><ul id="0cc959e1-1c9a-4427-9179-f366a2dc0311" class="bulleted-list"><li style="list-style-type:disc">Подготовить музыкальное сопровождение с диджеем</li></ul><p id="772d1325-9c93-4bb5-9a4c-a3203400835a" class=""><em><strong>Как:</strong></em></p><ol type="1" id="43cba5a3-8cae-474b-9e27-359e43c067e8" class="numbered-list" start="1"><li>Прийти в назначенное время, в назначенное место (на планерке записать)</li></ol><ol type="1" id="327fd48f-6690-46d6-84a1-6eead91510d3" class="numbered-list" start="2"><li>Организовать детей, чтобы они вели себя тихо и спокойно</li></ol><ol type="1" id="1db0a406-48b3-4944-8adf-1fdad9f5c00e" class="numbered-list" start="3"><li>Сесть рядом с ведущим и помочь ей/ему записать выступающих детей + ведущих (записывается имя и детали выступления, обговаривается номер с ребёнком и кемплидером, показывается часть номера)</li></ol><ol type="1" id="8f4442ff-8788-4e61-95df-3209a03a95e6" class="numbered-list" start="4"><li>С диджеем договориться о музыке (скинуть в тг/найти самостоятельно/попроси попросить обрезать и т.д.)</li></ol><ol type="1" id="955fd5a3-cd3d-403a-9cf1-4d31cf626004" class="numbered-list" start="5"><li>Убедиться что все выступающие записаны.</li></ol><ol type="1" id="7200c9e2-3e40-4bb2-9dae-c76cc581cfdb" class="numbered-list" start="6"><li>Уйти</li></ol><p id="1c2bcf2a-2d83-457d-be81-a27745d4c522" class=""><span style="border-bottom:0.05em solid"><em><strong>Ведущие:</strong></em></span></p><ol type="1" id="5fe8b662-d391-4a0a-88da-ed5ae5f40174" class="numbered-list" start="1"><li>В назначенное время отправить ваших детей, желающих стать ведущими к ведущему, чтобы они знали как и кого они будут представлять</li></ol><ol type="1" id="5a638d69-d3d4-46ee-a585-ede28fa95ad1" class="numbered-list" start="2"><li>Дети ведущие получают слова для представления</li></ol><ol type="1" id="26b07264-3160-4e88-bf19-296fcea97fb6" class="numbered-list" start="3"><li>Ваши задача прорепетировать этот текст с детьми<br/><br/></li></ol><figure id="4ac71a8f-f5bc-4fd7-ab0d-47b6965c719b"><div class="source"><a href="https://www.loom.com/share/34a2780480a941999adff34ef4cfe494?sid=2e369347-32ee-4fa7-9a7d-8fd827563341">https://www.loom.com/share/34a2780480a941999adff34ef4cfe494?sid=2e369347-32ee-4fa7-9a7d-8fd827563341</a></div></figure><p id="a0177d9a-19e1-4583-ae4f-a208756993df" class=""><span style="border-bottom:0.05em solid"><em><strong>Выступление: </strong></em></span></p><ul id="755b6ea1-1c3f-4ce2-b0e1-223e94b1bac5" class="bulleted-list"><li style="list-style-type:disc">Посмотреть перед началом Шоу Талантов порядок выступлений и знать, когда ваши дети выходят на сцену</li></ul><ul id="f3d86221-229e-4864-9623-0c0b84e6f540" class="bulleted-list"><li style="list-style-type:disc">Поддерживать АБСОЛЮТНО ВСЕХ детей</li></ul><ul id="86549630-19bb-42e2-b6c6-41ae8e31a5fd" class="bulleted-list"><li style="list-style-type:disc">Пожелать удачи своим детям перед их выступлением, настроить их</li></ul><ul id="77be5f97-0aea-4d71-9d8d-6f32bc78e664" class="bulleted-list"><li style="list-style-type:disc">После выступления ваших детей - крепко обнять и похвалить</li></ul><ul id="0af8a7a8-43f7-4407-b093-987bc4ad4b01" class="bulleted-list"><li style="list-style-type:disc">Отправить видео родителям</li></ul><p id="5c476450-8936-4118-aecd-ccf0adceeb71" class=""><span style="border-bottom:0.05em solid"><em><strong>Поддержка:</strong></em></span></p><ul id="23cc3594-f9f7-4a59-95f5-bbd8597e2722" class="bulleted-list"><li style="list-style-type:disc">Подготовить плакаты поддержки для своих выступающих</li></ul><ul id="72d8537d-1c15-4a27-bb01-f6ca305e8ce3" class="bulleted-list"><li style="list-style-type:disc">Раздать сердечки своей команде</li></ul><ul id="cbd82546-92f4-4ae9-a2ec-1079515f0607" class="bulleted-list"><li style="list-style-type:disc">Можно придумать кричалки для своих</li></ul><ul id="cff92ecf-9620-41c1-a019-37999c889aa1" class="bulleted-list"><li style="list-style-type:disc">Вдохнови детей на крутую поддержку</li></ul><p id="215492a1-d896-47d6-a3f5-002a7b790a97" class=""><em><strong>ОЧЕНЬ ВАЖНО❗️</strong></em></p><ul id="33320d7a-0a67-4a86-b612-068f37040a02" class="bulleted-list"><li style="list-style-type:disc">Поддерживать тишину во время выступлений (контролировать детей которые выходят из зала и обратно, контролировать тишину)</li></ul><ul id="da34fd66-b859-4114-8a03-a347de067b82" class="bulleted-list"><li style="list-style-type:disc">Поддержка - вы пример и организатор всей поддержки</li></ul><p id="793faa12-d907-4324-89c3-625044b5d25c" class=""><span style="border-bottom:0.05em solid"><em><strong>ПОДДЕРЖКА:</strong></em></span></p><ul id="f10449cc-fa82-41a7-89be-83eb9bbcb255" class="bulleted-list"><li style="list-style-type:disc">Один из наших главных принципов</li></ul><ul id="5842000c-e403-4e1c-86f7-fb38f10ddd4a" class="bulleted-list"><li style="list-style-type:disc">Поддерживаем в жизни и мероприятиях</li></ul><ul id="665ec2b3-2652-4143-b7bc-6b1054214a31" class="bulleted-list"><li style="list-style-type:disc">Поддерживаем пока кто-то выходит на сцену (go-go-go, let’s go)</li></ul><ul id="03b7d0b7-b36f-470e-b1a6-eb0c2f268d13" class="bulleted-list"><li style="list-style-type:disc">Поддерживаем пока кто-то уходит со сцены (brilliant, amazing, wonderful, great job, fantastic, perfect, имя человека, название команды)</li></ul><ul id="d363344b-fa0d-4abf-b73e-dd42fb11a092" class="bulleted-list"><li style="list-style-type:disc">Поддержка на всех мероприятиях (во время спортивной игры, холи и т.д.)</li></ul><ul id="840117c7-ef55-4634-8441-9d381d5cd11c" class="bulleted-list"><li style="list-style-type:disc">Первые два дня показываем дикий пример и мотивируем команду (ачивками, командными баллами) - дети привыкают и дальше сами поддерживают всех</li></ul><p id="4d06482b-42b5-457c-b4ac-7c755e30f6d5" class=""><span style="border-bottom:0.05em solid"><em><strong>Как выглядит крутая поддержка?</strong></em></span></p><ol type="1" id="203de73a-c458-4cc7-a584-c152c75d0830" class="numbered-list" start="1"><li>Дети стоят</li></ol><ol type="1" id="afe52241-d2eb-404b-be05-430674a473e8" class="numbered-list" start="2"><li>У детей есть плакаты поддержки/сердечки/смайлики/шуршалки</li></ol><ol type="1" id="62f05392-62d1-4cd4-9de8-edc1c201970e" class="numbered-list" start="3"><li>ВСЕ ПОДДЕРЖИВАЮТ (важно объяснить правило колеса)</li></ol></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

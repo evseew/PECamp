@@ -1,0 +1,689 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Campleaders 2024</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="6be322c4-9792-4086-89ed-b590a134746b" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="https://www.notion.so/icons/school_pink.svg"/></div><h1 class="page-title">Campleaders 2024</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-person"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesPerson"><path d="M10.9536 7.90088C12.217 7.90088 13.2559 6.79468 13.2559 5.38525C13.2559 4.01514 12.2114 2.92017 10.9536 2.92017C9.70142 2.92017 8.65137 4.02637 8.65698 5.39087C8.6626 6.79468 9.69019 7.90088 10.9536 7.90088ZM4.4231 8.03003C5.52368 8.03003 6.42212 7.05859 6.42212 5.83447C6.42212 4.63843 5.51245 3.68945 4.4231 3.68945C3.33374 3.68945 2.41846 4.64966 2.41846 5.84009C2.42407 7.05859 3.32251 8.03003 4.4231 8.03003ZM1.37964 13.168H5.49561C4.87231 12.292 5.43384 10.6074 6.78711 9.51807C6.18628 9.14746 5.37769 8.87231 4.4231 8.87231C1.95239 8.87231 0.262207 10.6917 0.262207 12.1628C0.262207 12.7974 0.548584 13.168 1.37964 13.168ZM7.50024 13.168H14.407C15.4009 13.168 15.7322 12.8423 15.7322 12.2864C15.7322 10.8489 13.8679 8.88354 10.9536 8.88354C8.04492 8.88354 6.17505 10.8489 6.17505 12.2864C6.17505 12.8423 6.50635 13.168 7.50024 13.168Z"></path></svg></span>Owner</th><td><span class="user"><img src="https://lh3.googleusercontent.com/a/AATXAJxH61P0YbdZS3hmX8QQnaiC6xwc-0RbITNge7dg=s100" class="icon user-icon"/>Михаил Дмитриевич Корощенко</span></td></tr></tbody></table></header><div class="page-body"><figure id="fb718bb3-a099-4643-9dc6-8cbda1473474" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/Homework%20fb718bb3a09946439dc68cbda1473474.html"><span class="icon">📚</span>Homework</a></figure><div id="9f985710-f2f3-4271-aeee-5ec2fdf27766" class="column-list"><div id="fef1ceb7-4762-4f60-81b5-b5f52861d067" style="width:144.1964285714287%" class="column"><h2 id="c0feb5fc-2c39-459a-9656-feb8620563c3" class="">О PE Camp</h2><figure id="16d51d51-b639-4071-8261-2892b2e10311" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%97%D0%BD%D0%B0%D0%BA%D0%BE%D0%BC%D1%81%D1%82%D0%B2%D0%BE%20%D1%81%20PE%20Camp%2016d51d51b639407182612892b2e10311.html"><span class="icon">🏕️</span>Знакомство с PE Camp</a></figure><figure id="0fb9a047-014a-4d1c-9d2a-b47c008cbaeb" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%90%D0%BD%D0%B3%D0%BB%D0%B8%D0%B8%CC%86%D1%81%D0%BA%D0%B8%D0%B8%CC%86%20%D0%B2%20%D0%BB%D0%B0%D0%B3%D0%B5%D1%80%D0%B5%200fb9a047014a4d1c9d2ab47c008cbaeb.html"><img class="icon" src="https://www.notion.so/icons/translate_pink.svg"/>Английский в лагере</a></figure><figure id="2d93cf9b-b27c-4cfb-9b42-e80cd5ace6bf" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%A1%D0%BF%D0%BE%D1%80%D1%82%20%D0%B2%20%D0%BB%D0%B0%D0%B3%D0%B5%D1%80%D0%B5%202d93cf9bb27c4cfb9b42e80cd5ace6bf.html"><img class="icon" src="https://www.notion.so/icons/basketball_pink.svg"/>Спорт в лагере</a></figure><figure id="329d6aa0-a760-4fa0-8981-39bfe2758784" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%A2%D0%B0%D0%BD%D1%86%D1%8B%20PE%20329d6aa0a7604fa0898139bfe2758784.html"><img class="icon" src="https://www.notion.so/icons/music-album_pink.svg"/>Танцы PE</a></figure><h2 id="ecd42c90-b2ac-4cb2-81e8-92f749194fea" class="">Родители</h2><figure id="b97babac-f7c1-45af-8359-9b1e912871ab" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%9F%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF%D1%8B%20%D0%BE%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D1%8F%20%D1%81%20%D1%80%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8F%D0%BC%D0%B8%20b97babacf7c145af83599b1e912871ab.html"><img class="icon" src="https://www.notion.so/icons/people_pink.svg"/>Принципы общения с родителями</a></figure><figure id="609603db-2ac7-41ea-9f9d-c920417abad5" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%9E%D1%82%D1%8A%D0%B5%D0%B7%D0%B4%20%D0%B8%20%D0%B7%D0%B0%D0%B5%D0%B7%D0%B4%20609603db2ac741ea9f9dc920417abad5.html"><img class="icon" src="https://www.notion.so/icons/bus_pink.svg"/>Отъезд и заезд</a></figure><figure id="54d943f7-2d9e-4d76-bab4-e99698566c3f" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%90%D0%BD%D0%BA%D0%B5%D1%82%D0%B0%20%D1%80%D0%B5%D0%B1%D0%B5%D0%BD%D0%BA%D0%B0%20%D0%B2%20%D0%97%D0%9B%2054d943f72d9e4d76bab4e99698566c3f.html"><img class="icon" src="https://www.notion.so/icons/document_pink.svg"/>Анкета ребенка в ЗЛ</a></figure><figure id="d5dcf15d-f153-4948-bdb9-38b87a11f78b" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%A0%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D0%B8%20%D0%9F%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BD%D0%B8%D0%B8%CC%86%20%D0%B4%D0%B5%D0%BD%D1%8C%20%D0%B8%20%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%20%D1%81%D0%BC%D0%B5%D0%BD%D1%8B%20d5dcf15df1534948bdb938b87a11f78b.html"><span class="icon">🤝🏻</span>Родители. Последний день и после смены </a></figure><figure id="3f5cb89c-70ad-470c-a5fa-d978920f9f92" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%A0%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D0%B8%20%D0%92%D0%BE%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D1%81%D0%BC%D0%B5%D0%BD%D1%8B%203f5cb89c70ad470ca5fad978920f9f92.html"><span class="icon">🙌🏻</span>Родители. Во время смены</a></figure><figure id="f783e145-9761-4827-84ec-62d5eea37e74" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%A0%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D0%B8%20%D0%9E%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B8%CC%86%20%D0%B4%D0%B5%D0%BD%D1%8C%20f783e1459761482784ec62d5eea37e74.html"><span class="icon">👋🏻</span>Родители. Общение в первый день</a></figure><h2 id="8367a85c-466b-4644-b605-1d22ee25bf24" class="">Быт</h2><figure id="f2cc5736-fc33-4013-80fb-9d0cc054fa33" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B%20%D0%B2%20%D0%BB%D0%B0%D0%B3%D0%B5%D1%80%D1%8C%20f2cc5736fc33401380fb9d0cc054fa33.html"><img class="icon" src="https://www.notion.so/icons/official-document_pink.svg"/>Документы в лагерь</a></figure><figure id="49bcefa5-06a7-4b02-a0a6-8bb71c237b78" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%91%D1%8B%D1%82%20%D0%97%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D0%B5%2049bcefa506a74b02a0a68bb71c237b78.html"><img class="icon" src="https://www.notion.so/icons/home_pink.svg"/>Быт. Здоровье</a></figure><figure id="d3adc5e7-b646-42b4-aeee-1a91364c80d1" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%91%D1%8B%D1%82%20%D0%BA%D0%B5%D0%BC%D0%BF%D0%BB%D0%B8%D0%B4%D0%B5%D1%80%D0%B0%20d3adc5e7b64642b4aeee1a91364c80d1.html"><img class="icon" src="https://www.notion.so/icons/home_pink.svg"/>Быт кемплидера</a></figure><figure id="d56ea1d4-8778-4d74-8adc-728dc522c7bb" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%91%D1%8B%D1%82%20%D0%A1%D1%82%D0%BE%D0%BB%D0%BE%D0%B2%D0%B0%D1%8F%20d56ea1d487784d748adc728dc522c7bb.html"><img class="icon" src="https://www.notion.so/icons/dining_pink.svg"/>Быт. Столовая</a></figure><figure id="cbe32cec-71af-4993-9d09-884bd116344b" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%91%D1%8B%D1%82%20%D0%A3%D0%B1%D0%BE%D1%80%D0%BA%D0%B0%20cbe32cec71af49939d09884bd116344b.html"><img class="icon" src="https://www.notion.so/icons/coat_pink.svg"/>Быт. Уборка </a></figure><p id="ef9e43d6-a399-4ef6-96c4-6e991d930105" class="">
+</p><p id="60961f0d-5271-43a5-9fbb-dfd8978f571d" class="">
+</p></div><div id="21ea9340-0641-430b-b5a5-cb5e5ea11141" style="width:100%" class="column"><h2 id="72d5fd84-b48f-48ae-879a-b179f24ab68f" class="">Дети</h2><figure id="8e3758da-0a68-411c-9fab-1ec10049f800" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%92%D0%BE%D0%B2%D0%BB%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%208e3758da0a68411c9fab1ec10049f800.html"><img class="icon" src="https://www.notion.so/icons/candy_pink.svg"/>Вовлечение</a></figure><figure id="139aa4eb-8b26-4aa6-8c2e-f98b08d1400a" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%9E%D1%81%D0%BE%D0%B1%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8%20%D0%B4%D0%B5%D1%82%D0%B5%D0%B8%CC%86%20%D1%80%D0%B0%D0%B7%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%B2%D0%BE%D0%B7%D1%80%D0%B0%D1%81%D1%82%D0%B0%20139aa4eb8b264aa68c2ef98b08d1400a.html"><img class="icon" src="https://www.notion.so/icons/baby_pink.svg"/>Особенности детей разного возраста</a></figure><figure id="e1831b2e-8a31-4eef-82d2-649cd376875f" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%A1%D0%BF%D0%BB%D0%BE%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B%20e1831b2e8a314eef82d2649cd376875f.html"><img class="icon" src="https://www.notion.so/icons/groups_pink.svg"/>Сплочение команды</a></figure><figure id="84f6ccc6-74fd-4fb1-b444-2b3f9766c2f6" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%A6%D0%B5%D0%BB%D1%8C%20%D0%BD%D0%B0%20%D1%81%D0%BC%D0%B5%D0%BD%D1%83%20%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0%20%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B%2084f6ccc674fd4fb1b4442b3f9766c2f6.html"><img class="icon" src="https://www.notion.so/icons/bullseye_pink.svg"/>Цель на смену. Правила команды.</a></figure><figure id="dc37b4e1-eca5-4be7-a12c-2003b9e26e15" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%97%D0%B0%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B8%D0%B3%D1%80%D1%8B%20dc37b4e1eca54be7a12c2003b9e26e15.html"><img class="icon" src="https://www.notion.so/icons/bowling_pink.svg"/>Заявление игры</a></figure><figure id="bbe0ecfb-9d6e-4123-b0f0-705d2aa419bb" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/Support%20bbe0ecfb9d6e4123b0f0705d2aa419bb.html"><img class="icon" src="https://www.notion.so/icons/battery-charging_pink.svg"/>Support</a></figure><figure id="3c96297d-a38f-4bbf-8788-be19a7eebd31" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/Brainstorming%203c96297da38f4bbf8788be19a7eebd31.html"><img class="icon" src="https://www.notion.so/icons/thought-dialogue_pink.svg"/>Brainstorming </a></figure><figure id="7623c64d-4294-4766-ba9d-df9390ea9888" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%90%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5%20%D1%81%D0%BB%D1%83%D1%88%D0%B0%D0%BD%D0%B8%D0%B5%207623c64d42944766ba9ddf9390ea9888.html"><img class="icon" src="https://www.notion.so/icons/ear_pink.svg"/>Активное слушание </a></figure><figure id="bbc132f9-9b54-43eb-adde-331b3eca1fb5" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%9E%D0%B4%D0%BD%D0%BE%D0%BC%D0%B8%D0%BD%D1%83%D1%82%D0%BD%D0%B0%D1%8F%20%D1%86%D0%B5%D0%BB%D1%8C%20bbc132f99b5443ebadde331b3eca1fb5.html"><img class="icon" src="https://www.notion.so/icons/bullseye_pink.svg"/>Одноминутная цель</a></figure><figure id="373a32e3-75d6-49c7-aa54-207428efc36e" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0%20%D0%BC%D0%BE%D1%82%D0%B8%D0%B2%D0%B0%D1%86%D0%B8%D0%B8%20373a32e375d649c7aa54207428efc36e.html"><img class="icon" src="https://www.notion.so/icons/star-outline_pink.svg"/>Система мотивации</a></figure><h2 id="87908297-672d-4bd0-a94a-18b3163f72f1" class="">Урок</h2><figure id="6c6e7116-38ea-46f2-b1f7-dc0ca6db1799" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%A3%D1%80%D0%BE%D0%BA%20%D0%B2%20%D0%BB%D0%B0%D0%B3%D0%B5%D1%80%D0%B5%206c6e711638ea46f2b1f7dc0ca6db1799.html"><img class="icon" src="https://www.notion.so/icons/language_pink.svg"/>Урок в лагере</a></figure><figure id="4a42c891-9d02-433a-9a34-7fa1e46c2bc5" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0%20%D0%BD%D0%B0%20%D1%83%D1%80%D0%BE%D0%BA%D0%B0%D1%85%204a42c8919d02433a9a347fa1e46c2bc5.html"><img class="icon" src="https://www.notion.so/icons/gavel_pink.svg"/>Правила на уроках</a></figure><figure id="2b39da86-a165-410b-a7b9-331380afd250" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20%D0%BB%D0%B5%D0%BA%D1%81%D0%B8%D0%BA%D0%BE%D0%B8%CC%86%202b39da86a165410ba7b9331380afd250.html">Работа с лексикой</a></figure><figure id="1389f72c-c24a-4073-8794-5f6911dfab10" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%9F%D0%B0%D1%82%D1%82%D0%B5%D1%80%D0%BD%D1%8B%201389f72cc24a407387945f6911dfab10.html"><img class="icon" src="https://www.notion.so/icons/playlist_pink.svg"/>Паттерны</a></figure><figure id="731c748f-dcc5-4c02-ad43-b46bb3909a3d" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%93%D1%80%D0%B0%D0%BC%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0%20731c748fdcc54c02ad43b46bb3909a3d.html"><img class="icon" src="https://www.notion.so/icons/forward_pink.svg"/>Грамматика</a></figure><figure id="d43e2880-fa50-4f04-aee4-4e3698696da3" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/FTC%20d43e2880fa504f04aee44e3698696da3.html"><img class="icon" src="https://www.notion.so/icons/conversation_pink.svg"/>FTC</a></figure><h2 id="87800503-d330-4eda-974b-e306823aaa5d" class="">Дисциплина</h2><figure id="ddef8ccf-2ab2-4e78-b42a-139ef350417b" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/Conflict%20ddef8ccf2ab24e78b42a139ef350417b.html"><img class="icon" src="https://www.notion.so/icons/meeting_pink.svg"/>Conflict </a></figure><figure id="d6cb7018-2a67-42e2-aa10-f8b7d043436c" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%92%D1%8B%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%20d6cb70182a6742e2aa10f8b7d043436c.html"><img class="icon" src="https://www.notion.so/icons/emoji-angry_pink.svg"/>Выговор</a></figure><figure id="7e7094ef-e4e0-41fb-8319-ee5043bda06b" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%9F%D0%BE%D1%85%D0%B2%D0%B0%D0%BB%D0%B0%207e7094efe4e041fb8319ee5043bda06b.html"><img class="icon" src="https://www.notion.so/icons/thumbs-up_pink.svg"/>Похвала</a></figure><figure id="5b71abd0-9d34-459e-bbf9-fada81840a3d" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%AF-%D1%81%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D0%B5%205b71abd09d34459ebbf9fada81840a3d.html"><img class="icon" src="https://www.notion.so/icons/profile_pink.svg"/>Я-сообщение</a></figure><p id="7199933a-e9d7-4586-b5fa-d74e27402a7f" class="">
+</p></div><div id="1a7e2bed-fe46-442a-a81f-e966e6263e4f" style="width:100%" class="column"><h2 id="6d35b861-14ff-4a53-8ca2-b2f84bb3034d" class="">Мероприятия</h2><figure id="4ffdfa81-abde-4289-a594-fb9cdff59d19" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%92%D0%B5%D1%87%D0%B5%D1%80%D0%B8%D0%BD%D0%BA%D0%B8%20%D0%B2%20PE%204ffdfa81abde4289a594fb9cdff59d19.html"><img class="icon" src="https://www.notion.so/icons/confetti-ball_pink.svg"/>Вечеринки в PE</a></figure><figure id="330734a4-6924-4409-bbf5-d0dec86f2fb0" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/Dancebattle%20330734a469244409bbf5d0dec86f2fb0.html"><img class="icon" src="https://www.notion.so/icons/people_pink.svg"/> Dancebattle</a></figure><figure id="6a82a87a-7141-4256-b907-13bbe67ffe24" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%A0%D0%B5%D0%BF%D0%B5%D1%82%D0%B8%D1%86%D0%B8%D0%B8%206a82a87a71414256b90713bbe67ffe24.html"><img class="icon" src="https://www.notion.so/icons/music-artist_pink.svg"/>Репетиции</a></figure><figure id="e33f30cb-21ef-494a-b9d3-1f1e11fa8882" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/Evening%20Show%20e33f30cb21ef494ab9d31f1e11fa8882.html"><img class="icon" src="https://www.notion.so/icons/music-artist_pink.svg"/>Evening Show</a></figure><figure id="65d2f328-9f59-4168-b46e-c64892fc4001" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/Business%20Day%2065d2f3289f594168b46ec64892fc4001.html"><img class="icon" src="https://www.notion.so/icons/cash_pink.svg"/>Business Day </a></figure><figure id="220cce16-3954-47f6-be8e-7ecad81de179" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/Relax%20220cce16395447f6be8e7ecad81de179.html"><img class="icon" src="https://www.notion.so/icons/bed_pink.svg"/>Relax </a></figure><figure id="b0c3715e-40d5-4876-ae19-61ee529a3da0" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%9F%D0%BB%D1%8F%D0%B6%20b0c3715e40d54876ae1961ee529a3da0.html"><img class="icon" src="https://www.notion.so/icons/aquarius_pink.svg"/>Пляж</a></figure><figure id="9b838e99-d7ed-47a0-bc46-bfd21529bb40" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/Talent%20Show%209b838e99d7ed47a0bc46bfd21529bb40.html"><img class="icon" src="https://www.notion.so/icons/star_pink.svg"/>Talent Show </a></figure><figure id="c8067b9d-1f09-4b06-b080-89582e891002" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%9A%D1%80%D1%83%D0%B3%20%D0%BF%D0%BE%D1%87%D0%B5%D1%82%D0%B0%20c8067b9d1f094b06b08089582e891002.html"><img class="icon" src="https://www.notion.so/icons/heart_pink.svg"/>Круг почета </a></figure><figure id="8b939952-351b-43b1-bf50-b95d1410c0ad" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%9F%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D0%BA%D0%B0%208b939952351b43b1bf50b95d1410c0ad.html"><img class="icon" src="https://www.notion.so/icons/conversation_pink.svg"/>Проходка </a></figure><figure id="45144d8c-3023-4bc1-8d83-3619acbfb685" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%A1%D0%BF%D0%B0%D1%81%D0%B8%D0%B1%D0%BA%D0%B8%2045144d8c30234bc18d833619acbfb685.html"><img class="icon" src="https://www.notion.so/icons/create_pink.svg"/>Спасибки</a></figure><figure id="ae2165bd-739c-4122-9169-20199d364568" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/Workshops%20ae2165bd739c4122916920199d364568.html"><img class="icon" src="https://www.notion.so/icons/butterfly_pink.svg"/>Workshops</a></figure><figure id="7cb2e6c7-e334-43f7-92d0-76420a6bea4b" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%92%D0%B5%D1%80%D1%82%D1%83%D1%88%D0%BA%D0%B8%207cb2e6c7e33443f792d076420a6bea4b.html"><img class="icon" src="https://www.notion.so/icons/flag_pink.svg"/>Вертушки</a></figure><figure id="9395c6c4-cb0d-464b-bbb2-3f89a23224fd" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/Top%20Secret%209395c6c4cb0d464bbbb23f89a23224fd.html"><img class="icon" src="https://www.notion.so/icons/conceal_pink.svg"/>Top Secret</a></figure><figure id="6307df9e-8478-4ee7-b5a1-f89fbd4e8f9d" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%9D%D0%B0%D0%B3%D1%80%D0%B0%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%206307df9e84784ee7b5a1f89fbd4e8f9d.html"><img class="icon" src="https://www.notion.so/icons/trophy_pink.svg"/>Награждение </a></figure><h2 id="64db3537-e947-4735-8a5c-e207c40b3f39" class="">Педкопилка PE</h2><figure id="361b492f-1b66-4636-9a5e-68c69582fe4f" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%91%D0%B0%D0%BD%D0%BA%20%D0%B8%D0%B3%D1%80%20361b492f1b6646369a5e68c69582fe4f.html"><span class="icon">🎰</span>Банк игр</a></figure><figure id="4718e4f0-a757-4a24-9cc2-2482c550fe46" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%91%D0%B0%D0%BD%D0%BA%20%D0%BB%D0%B5%D0%B3%D0%B5%D0%BD%D0%B4%204718e4f0a7574a249cc22482c550fe46.html"><span class="icon">🔥</span>Банк легенд</a></figure><figure id="3482d021-3781-4c46-af08-48ef912b1b95" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%A1%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B8%20%D1%82%D0%BE%D0%BF%D1%81%D0%B8%D0%BA%D1%80%D0%B5%D1%82%D0%B0%203482d02137814c46af0848ef912b1b95.html"><img class="icon" src="https://www.notion.so/icons/menorah_pink.svg"/>Сценарии топсикрета</a></figure><p id="d30fcb7b-bde3-4f2f-85c5-e34ea78f59ba" class=""><a href="https://disk.yandex.ru/d/3GhOWD3NFeswlA">👯‍♀️ Актуальные танцы PE</a></p><p id="3422d517-2a77-4f02-8c0e-980a466ed618" class="">
+</p></div></div><p id="80c2a5c2-ee28-4280-9773-23d5399f149d" class="">
+</p><figure id="97e173d0-52bd-4825-b423-dcaa13094bc8" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%9F%D0%BE%D1%82%D0%B5%D1%80%D1%8F%D1%88%D0%BA%D0%B8%2097e173d052bd4825b423dcaa13094bc8.html"><img class="icon" src="https://www.notion.so/icons/flag_pink.svg"/>Потеряшки</a></figure><figure id="50fb154f-d09b-4921-b459-41517042f726" class="link-to-page"><a href="Campleaders%202024%206be322c49792408689edb590a134746b/%D0%A1%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B8%20Evening%20Show%2050fb154fd09b4921b45941517042f726.html"><img class="icon" src="https://www.notion.so/icons/script_pink.svg"/>Сценарии Evening Show</a></figure></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
