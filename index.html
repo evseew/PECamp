@@ -1,4 +1,46 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Campleaders 2024</title><style>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Campleaders 2024</title><script>
+// Функция для преобразования ссылок Loom в iframe плееры
+function convertLoomLinksToEmbeds() {
+	// Найти все ссылки на странице
+	const links = document.querySelectorAll('a[href*="loom.com/share"]');
+	
+	// Перебрать каждую ссылку
+	links.forEach(link => {
+		// Получить URL из ссылки
+		const loomUrl = link.getAttribute('href');
+		
+		// Создать контейнер для видео
+		const container = document.createElement('div');
+		container.style.position = 'relative';
+		container.style.paddingBottom = '56.25%'; // Соотношение сторон 16:9
+		container.style.height = '0';
+		container.style.overflow = 'hidden';
+		container.style.maxWidth = '100%';
+		container.style.marginTop = '10px';
+		container.style.marginBottom = '10px';
+		
+		// Создать iframe для встраивания видео
+		const iframe = document.createElement('iframe');
+		iframe.src = loomUrl.replace('share', 'embed');
+		iframe.frameBorder = '0';
+		iframe.allowFullscreen = true;
+		iframe.style.position = 'absolute';
+		iframe.style.top = '0';
+		iframe.style.left = '0';
+		iframe.style.width = '100%';
+		iframe.style.height = '100%';
+		
+		// Добавить iframe в контейнер
+		container.appendChild(iframe);
+		
+		// Заменить ссылку на контейнер с видео
+		link.parentNode.replaceChild(container, link);
+	});
+}
+
+// Запустить функцию после загрузки страницы
+document.addEventListener('DOMContentLoaded', convertLoomLinksToEmbeds);
+</script><style>
 /* cspell:disable-file */
 /* webkit printing magic: print all background colors */
 html {
